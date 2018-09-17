@@ -10,6 +10,19 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    
+    //Outlets
+    @IBOutlet weak var cityName: UILabel!
+    @IBOutlet weak var weatherType: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var currentCityTemp: UILabel!
+    @IBOutlet weak var currentDate: UILabel!
+    @IBOutlet weak var specialBG: UIImageView!
+    
+    //Variables
+    
+    
+    //Constants
 
     override func viewDidLoad() {
         super.viewDidLoad()
