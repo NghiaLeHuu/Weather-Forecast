@@ -104,10 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49047B182151FEFB00738094 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D51C1457214F797E00A4E7A6 = {
 			isa = PBXGroup;
 			children = (
-				D5AD4E762151F94200C379D9 /* View */,
+				49047B182151FEFB00738094 /* View */,
 				D5AD4E752151F93C00C379D9 /* Model */,
 				D51C14A2214F7A1F00A4E7A6 /* Extensions */,
 				D51C149F214F79FD00A4E7A6 /* Extras */,
@@ -200,13 +207,6 @@
 				D5AD4E772151F94F00C379D9 /* CurrentWeather.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D5AD4E762151F94200C379D9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
