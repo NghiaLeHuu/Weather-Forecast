@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             self.currentDate.text = self.currentWeather._date
         }
         print("Data Downloaded")
+        print("hello world")
     }
 
     override func didReceiveMemoryWarning() {
