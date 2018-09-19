@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49F6AA672151F918003AFA0C /* forecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6AA662151F918003AFA0C /* forecastCell.swift */; };
 		D51C1464214F797E00A4E7A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C1463214F797E00A4E7A6 /* AppDelegate.swift */; };
 		D51C1466214F797E00A4E7A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C1465214F797E00A4E7A6 /* ViewController.swift */; };
 		D51C1469214F797E00A4E7A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51C1467214F797E00A4E7A6 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49F6AA662151F918003AFA0C /* forecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = forecastCell.swift; path = ../../forecastCell.swift; sourceTree = "<group>"; };
 		D51C1460214F797E00A4E7A6 /* Weather Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Forecast.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51C1463214F797E00A4E7A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D51C1465214F797E00A4E7A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		D51C149D214F79EF00A4E7A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49F6AA662151F918003AFA0C /* forecastCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				D51C1466214F797E00A4E7A6 /* ViewController.swift in Sources */,
 				D51C1464214F797E00A4E7A6 /* AppDelegate.swift in Sources */,
 				D51C14A1214F7A1B00A4E7A6 /* Extras.swift in Sources */,
+				49F6AA672151F918003AFA0C /* forecastCell.swift in Sources */,
 				D51C146C214F797E00A4E7A6 /* Weather_Forecast.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
