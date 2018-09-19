@@ -14,7 +14,6 @@ depends-top-level:
 - !private "Date"
 - !private "DateFormatter"
 - "Double"
-- "DownloadComplete"
 - !private "FORECAST_API_URL"
 - !private "JSON"
 - "String"
@@ -44,7 +43,6 @@ depends-member:
 - !private ["16Weather_Forecast07CurrentA0C", "Date"]
 - !private ["16Weather_Forecast07CurrentA0C", "DateFormatter"]
 - ["16Weather_Forecast07CurrentA0C", "Double"]
-- ["16Weather_Forecast07CurrentA0C", "DownloadComplete"]
 - !private ["16Weather_Forecast07CurrentA0C", "FORECAST_API_URL"]
 - !private ["16Weather_Forecast07CurrentA0C", "JSON"]
 - ["16Weather_Forecast07CurrentA0C", "String"]
@@ -53,6 +51,7 @@ depends-member:
 - ["16Weather_Forecast07CurrentA0C", "_date"]
 - ["16Weather_Forecast07CurrentA0C", "_weatherType"]
 - ["16Weather_Forecast07CurrentA0C", "deinit"]
+- ["16Weather_Forecast07CurrentA0C", "downloadCurrentWeather"]
 - ["16Weather_Forecast07CurrentA0C", "init"]
 - !private ["16Weather_Forecast07CurrentA0C", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "dateStyle"]
@@ -349,4 +348,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "f4e7949ce98f148c70669cd3417bed37"
+interface-hash: "8318c7934ef0127bb0be3ab2cb1ed4d3"

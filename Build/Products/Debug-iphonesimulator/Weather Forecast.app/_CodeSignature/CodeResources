@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		2Tm08iq0hpLsCfhoP2PFP7jtZ4g=
+		LGDY0ajojXONQD4JPhL5GpS+TA8=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		yHNKnv6h5J0EI3uwJkMNEo0rSUc=
+		lnpLVDB8MwOk2Wm1k+49/hzhdDc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		nmwQRRMrTKM4GDl01QvR+EgAnxw=
+		qA9lZJiX+8NN4FsGK9AkURq7u9k=
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
@@ -75,6 +75,10 @@
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
 		WfIxukTbJqM/yIDBN1Lh9v7qvxM=
+		</data>
+		<key>Frameworks/libswiftCoreLocation.dylib</key>
+		<data>
+		twaJaa88S5XL0BbnZC1HIe72kVM=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
@@ -143,7 +147,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FFKs33rWyRBKnosDaTIM40TEf0Cm2p4JxMK0efB8gDs=
+			nt4NwOhxbRcYQih2CR+qs03La7goaHjV29RTp/b9NkM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -171,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CglRCuN7ardUKvAxl2CNS2a/o5u6QLOp74vjNdTPH8c=
+			vdc6Xh/U6Kz7f+DclHT+D1vbns2EK/M1zL6qkif/fAw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -185,7 +189,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5WpjqPz8ueWk3bSzrafeU62R4RsavBFCbs4LgE17Bns=
+			f3Wk8UE/nKx/Nlq38ZBVrjWOFDD8Xd78jJEdrOMzEFs=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
@@ -263,6 +267,13 @@
 			<key>hash2</key>
 			<data>
 			Vkr4GI4RvaiyCFdFI9kW3qkG9S342vgkr92ztH8fbXA=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreLocation.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S8ggBuM6wL0JhyhTZ07deTKeXuus9zATiEtmSSvmqms=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftDarwin.dylib</key>

@@ -14,3 +14,10 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+extension Date {
+    func dayOfTheWeek() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self)
+    }
+}

@@ -164,6 +164,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -198,6 +199,7 @@ SWIFT_CLASS("_TtC16Weather_Forecast11AppDelegate")
 
 @class UILabel;
 @class UIImageView;
+@class UITableView;
 @class NSBundle;
 @class NSCoder;
 
@@ -209,9 +211,28 @@ SWIFT_CLASS("_TtC16Weather_Forecast14ViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentCityTemp;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentDate;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified specialBG;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified ForeCastTableView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableViewCell;
+
+@interface ViewController (SWIFT_EXTENSION(Weather_Forecast)) <UITableViewDataSource, UITableViewDelegate>
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC16Weather_Forecast12forecastCell")
+@interface forecastCell : UITableViewCell
+- (void)awakeFromNib;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified Temp;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified Day;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
