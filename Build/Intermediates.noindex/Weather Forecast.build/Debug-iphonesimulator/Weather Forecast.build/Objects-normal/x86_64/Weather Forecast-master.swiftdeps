@@ -1,8 +1,9 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "c4bc12390b81b507aa4254dc73b8326a"
-build_time: [1537323838, 146951000]
+build_time: [1537327937, 114030000]
 inputs:
-  "/Users/Andrew/Documents/Weather-Forecast/Extensions/Extensions.swift": [1537323835, 0]
-  "/Users/Andrew/Documents/Weather-Forecast/Controller/ViewController.swift": [1537323835, 0]
+  "/Users/Andrew/Documents/Weather-Forecast/Extensions/Extensions.swift": [1537327776, 0]
+  "/Users/Andrew/Documents/Weather-Forecast/Controller/ViewController.swift": [1537327776, 0]
   "/Users/Andrew/Documents/Weather-Forecast/Weather Forecast/AppDelegate.swift": [1537323835, 0]
-  "/Users/Andrew/Documents/Weather-Forecast/Extras/Extras.swift": [1537323835, 0]
+  "/Users/Andrew/Documents/Weather-Forecast/Extras/Extras.swift": [1537327776, 0]
+  "/Users/Andrew/Documents/Weather-Forecast/Model/CurrentWeather.swift": [1537327937, 0]

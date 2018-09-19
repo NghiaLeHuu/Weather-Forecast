@@ -15,145 +15,412 @@ provides-dynamic-lookup:
 - "weatherImage"
 - "weatherType"
 depends-top-level:
+- "AssignmentPrecedence"
+- "CurrentWeather"
+- !private "Int"
+- "StringLiteralType"
 - "UIImageView"
 - "UILabel"
 - "UIViewController"
 - "ViewController"
+- !private "print"
 depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "CurrentWeather"]
+- !private ["s7CVarArgP", "Int"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "cityName"]
+- !private ["s7CVarArgP", "currentCityTemp"]
+- !private ["s7CVarArgP", "currentDate"]
+- !private ["s7CVarArgP", "currentWeather"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "weatherType"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["16Weather_Forecast07CurrentA0C", "_cityName"]
+- !private ["16Weather_Forecast07CurrentA0C", "_currentTemp"]
+- !private ["16Weather_Forecast07CurrentA0C", "_date"]
+- !private ["16Weather_Forecast07CurrentA0C", "_weatherType"]
+- !private ["16Weather_Forecast07CurrentA0C", "downloadCurrentWeather"]
+- !private ["16Weather_Forecast07CurrentA0C", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CurrentWeather"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "cityName"]
+- !private ["s28CustomDebugStringConvertibleP", "currentCityTemp"]
+- !private ["s28CustomDebugStringConvertibleP", "currentDate"]
+- !private ["s28CustomDebugStringConvertibleP", "currentWeather"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "weatherType"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "CurrentWeather"]
+- !private ["s23CustomStringConvertibleP", "Int"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "cityName"]
+- !private ["s23CustomStringConvertibleP", "currentCityTemp"]
+- !private ["s23CustomStringConvertibleP", "currentDate"]
+- !private ["s23CustomStringConvertibleP", "currentWeather"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "weatherType"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "CurrentWeather"]
+- !private ["s9EquatableP", "Int"]
 - ["s9EquatableP", ""]
+- !private ["s9EquatableP", "cityName"]
+- !private ["s9EquatableP", "currentCityTemp"]
+- !private ["s9EquatableP", "currentDate"]
+- !private ["s9EquatableP", "currentWeather"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s9EquatableP", "weatherType"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "CurrentWeather"]
+- !private ["s8HashableP", "Int"]
 - ["s8HashableP", ""]
+- !private ["s8HashableP", "cityName"]
+- !private ["s8HashableP", "currentCityTemp"]
+- !private ["s8HashableP", "currentDate"]
+- !private ["s8HashableP", "currentWeather"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "viewDidLoad"]
+- !private ["s8HashableP", "weatherType"]
+- !private ["Si", "init"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "CurrentWeather"]
+- !private ["So8NSCodingP", "Int"]
 - ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "cityName"]
+- !private ["So8NSCodingP", "currentCityTemp"]
+- !private ["So8NSCodingP", "currentDate"]
+- !private ["So8NSCodingP", "currentWeather"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So8NSCodingP", "weatherType"]
+- !private ["So26NSExtensionRequestHandlingP", "CurrentWeather"]
+- !private ["So26NSExtensionRequestHandlingP", "Int"]
 - ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "cityName"]
+- !private ["So26NSExtensionRequestHandlingP", "currentCityTemp"]
+- !private ["So26NSExtensionRequestHandlingP", "currentDate"]
+- !private ["So26NSExtensionRequestHandlingP", "currentWeather"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So26NSExtensionRequestHandlingP", "weatherType"]
+- ["So8NSObjectC", "CurrentWeather"]
+- !private ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "cityName"]
 - ["So8NSObjectC", "currentCityTemp"]
 - ["So8NSObjectC", "currentDate"]
+- ["So8NSObjectC", "currentWeather"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "specialBG"]
+- !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "weatherImage"]
 - ["So8NSObjectC", "weatherType"]
+- !private ["So16NSObjectProtocolP", "CurrentWeather"]
+- !private ["So16NSObjectProtocolP", "Int"]
 - ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "cityName"]
+- !private ["So16NSObjectProtocolP", "currentCityTemp"]
+- !private ["So16NSObjectProtocolP", "currentDate"]
+- !private ["So16NSObjectProtocolP", "currentWeather"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "weatherType"]
+- !private ["s7NumericP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "CurrentWeather"]
+- !private ["So21UIAppearanceContainerP", "Int"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "cityName"]
+- !private ["So21UIAppearanceContainerP", "currentCityTemp"]
+- !private ["So21UIAppearanceContainerP", "currentDate"]
+- !private ["So21UIAppearanceContainerP", "currentWeather"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So21UIAppearanceContainerP", "weatherType"]
+- !private ["So18UIContentContainerP", "CurrentWeather"]
+- !private ["So18UIContentContainerP", "Int"]
 - ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "cityName"]
+- !private ["So18UIContentContainerP", "currentCityTemp"]
+- !private ["So18UIContentContainerP", "currentDate"]
+- !private ["So18UIContentContainerP", "currentWeather"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "weatherType"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "CurrentWeather"]
+- !private ["So18UIFocusEnvironmentP", "Int"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "cityName"]
+- !private ["So18UIFocusEnvironmentP", "currentCityTemp"]
+- !private ["So18UIFocusEnvironmentP", "currentDate"]
+- !private ["So18UIFocusEnvironmentP", "currentWeather"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So18UIFocusEnvironmentP", "weatherType"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So7UILabelC", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "CurrentWeather"]
+- !private ["So30UIPasteConfigurationSupportingP", "Int"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "cityName"]
+- !private ["So30UIPasteConfigurationSupportingP", "currentCityTemp"]
+- !private ["So30UIPasteConfigurationSupportingP", "currentDate"]
+- !private ["So30UIPasteConfigurationSupportingP", "currentWeather"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So30UIPasteConfigurationSupportingP", "weatherType"]
+- ["So11UIResponderC", "CurrentWeather"]
+- !private ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "cityName"]
 - ["So11UIResponderC", "currentCityTemp"]
 - ["So11UIResponderC", "currentDate"]
+- ["So11UIResponderC", "currentWeather"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "specialBG"]
+- !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "weatherImage"]
 - ["So11UIResponderC", "weatherType"]
+- !private ["So30UIResponderStandardEditActionsP", "CurrentWeather"]
+- !private ["So30UIResponderStandardEditActionsP", "Int"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "cityName"]
+- !private ["So30UIResponderStandardEditActionsP", "currentCityTemp"]
+- !private ["So30UIResponderStandardEditActionsP", "currentDate"]
+- !private ["So30UIResponderStandardEditActionsP", "currentWeather"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "weatherType"]
+- !private ["So16UIStateRestoringP", "CurrentWeather"]
+- !private ["So16UIStateRestoringP", "Int"]
 - ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "cityName"]
+- !private ["So16UIStateRestoringP", "currentCityTemp"]
+- !private ["So16UIStateRestoringP", "currentDate"]
+- !private ["So16UIStateRestoringP", "currentWeather"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "weatherType"]
+- !private ["So18UITraitEnvironmentP", "CurrentWeather"]
+- !private ["So18UITraitEnvironmentP", "Int"]
 - ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "cityName"]
+- !private ["So18UITraitEnvironmentP", "currentCityTemp"]
+- !private ["So18UITraitEnvironmentP", "currentDate"]
+- !private ["So18UITraitEnvironmentP", "currentWeather"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "weatherType"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "CurrentWeather"]
+- !private ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "UIImageView"]
 - ["So16UIViewControllerC", "UILabel"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "cityName"]
 - ["So16UIViewControllerC", "currentCityTemp"]
 - ["So16UIViewControllerC", "currentDate"]
+- ["So16UIViewControllerC", "currentWeather"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "specialBG"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "weatherImage"]
 - ["So16UIViewControllerC", "weatherType"]
+- !private ["9Alamofire14URLConvertibleP", "init"]
+- ["16Weather_Forecast14ViewControllerC", "CurrentWeather"]
+- !private ["16Weather_Forecast14ViewControllerC", "Int"]
 - ["16Weather_Forecast14ViewControllerC", "UIImageView"]
 - ["16Weather_Forecast14ViewControllerC", "UILabel"]
 - ["16Weather_Forecast14ViewControllerC", "cityName"]
 - ["16Weather_Forecast14ViewControllerC", "currentCityTemp"]
 - ["16Weather_Forecast14ViewControllerC", "currentDate"]
+- ["16Weather_Forecast14ViewControllerC", "currentWeather"]
 - ["16Weather_Forecast14ViewControllerC", "deinit"]
 - ["16Weather_Forecast14ViewControllerC", "didReceiveMemoryWarning"]
 - ["16Weather_Forecast14ViewControllerC", "init"]
+- !private ["16Weather_Forecast14ViewControllerC", "print"]
 - ["16Weather_Forecast14ViewControllerC", "specialBG"]
 - ["16Weather_Forecast14ViewControllerC", "viewDidLoad"]
 - ["16Weather_Forecast14ViewControllerC", "weatherImage"]
 - ["16Weather_Forecast14ViewControllerC", "weatherType"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CurrentWeather"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cityName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentCityTemp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentWeather"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "weatherType"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "16Weather_Forecast07CurrentA0C"
 - "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
 - "s8HashableP"
+- !private "Si"
+- !private "10SwiftyJSON17JSONSubscriptTypeP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
+- !private "s7NumericP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So16UIStateRestoringP"
 - "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "9Alamofire14URLConvertibleP"
 - "16Weather_Forecast14ViewControllerC"
+- !private "s18_BitwiseOperationsP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
@@ -167,6 +434,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/SwiftyJSON.framework/Headers/SwiftyJSON.h"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/Alamofire.framework/Headers/Alamofire.h"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/Andrew/Documents/Weather-Forecast/Frameworks/Alamofire.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
@@ -178,4 +451,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "4a7e3e500dcf38ecf77324cbc32ba3fa"
+interface-hash: "3703ea1fef8c763078f0e538609315e0"
