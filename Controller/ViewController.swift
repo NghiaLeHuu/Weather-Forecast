@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         }
         print("Data Downloaded")
         print("hello world")
+        print("hello hi")
     }
 
     override func didReceiveMemoryWarning() {
