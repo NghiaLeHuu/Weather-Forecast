@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
+import Alamofire
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     //Outlets
     @IBOutlet weak var cityName: UILabel!
@@ -20,30 +21,80 @@ class ViewController: UIViewController {
     @IBOutlet weak var specialBG: UIImageView!
     
     //Variables
+    let locationManager = CLLocationManager()
     
     
     //Constants
     var currentWeather: CurrentWeather!
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         currentWeather = CurrentWeather()
-        currentWeather.downloadCurrentWeather {
-            self.cityName.text = self.currentWeather._cityName
-            self.weatherType.text = self.currentWeather._weatherType
-            self.currentCityTemp.text = "\(Int(self.currentWeather._currentTemp))"
-            self.currentDate.text = self.currentWeather._date
-        }
+//        currentWeather.downloadCurrentWeather {
+//            self.cityName.text = self.currentWeather._cityName
+//            self.weatherType.text = self.currentWeather._weatherType
+//            self.currentCityTemp.text = "\(Int(self.currentWeather._currentTemp))"
+//            self.currentDate.text = self.currentWeather._date
+//        }
         print("Data Downloaded")
-        print("hello world")
-        print("hello hi")
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func setupLocation() {
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startMonitoringSignificantLocationChanges()
+        }
+    }
+    
+    func locationAuthCheck() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            //Get the location from the device
+            print(currentLocation.coordinate.longitude)
+            print(currentLocation.coordinate.latitude)
+            
+            currentLocation = locationManager.location!
+            
+            //Pass the location to the lat & long of API_URL
+            
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            
+            //Download the data from the API
+            currentWeather.downloadCurrentWeather {
+                self.cityName.text = self.currentWeather._cityName
+                self.weatherType.text = self.currentWeather._weatherType
+                self.currentCityTemp.text = "\(Int(self.currentWeather._currentTemp))"
+                self.currentDate.text = self.currentWeather._date
+            }
+        } else {
+            do {
+                try locationManager.requestWhenInUseAuthorization() // Ask for permission again
+            } catch {
+                locationAuthCheck() // Make a check
+            }
+        }
+    }
 
+    var i: Int = 0
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locationManager.location!
+
+        if i == 0 {
+            locationAuthCheck()
+            i = i + 1
+        }
+    }
+    
 
 }
 
