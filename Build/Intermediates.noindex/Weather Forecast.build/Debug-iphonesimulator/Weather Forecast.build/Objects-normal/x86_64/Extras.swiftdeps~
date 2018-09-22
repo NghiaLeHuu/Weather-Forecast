@@ -1,11 +1,14 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "API_URL"
 - "FORECAST_API_URL"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
+- "API_URL"
 - "FORECAST_API_URL"
+- "Location"
 - "StringLiteralType"
 depends-member:
 - ["s23BidirectionalCollectionP", "init"]
@@ -24,6 +27,9 @@ depends-member:
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s8HashableP", "init"]
 - ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- ["16Weather_Forecast8LocationC", "latitude"]
+- ["16Weather_Forecast8LocationC", "longitude"]
+- ["16Weather_Forecast8LocationC", "sharedInstance"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
 - ["s26RangeReplaceableCollectionP", "init"]
@@ -57,6 +63,7 @@ depends-nominal:
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
 - "10SwiftyJSON17JSONSubscriptTypeP"
+- "16Weather_Forecast8LocationC"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - "s26RangeReplaceableCollectionP"
@@ -108,4 +115,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "2206f09512577245f5ebfe99cd6f2e5c"
+interface-hash: "f819d3a21499ecb0833b1c0e318e99ab"

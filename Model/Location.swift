@@ -1,8 +1,8 @@
 //
-//  Location.swift
+//  location.swift
 //  Weather Forecast
 //
-//  Created by Doan The Dang Khoa on 9/19/18.
+//  Created by Doan The Dang Khoa on 9/22/18.
 //  Copyright © 2018 Nghia. All rights reserved.
 //
 

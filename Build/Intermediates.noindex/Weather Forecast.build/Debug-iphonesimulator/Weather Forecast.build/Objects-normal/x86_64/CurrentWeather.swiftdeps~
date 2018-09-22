@@ -8,13 +8,13 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "-"
+- !private "API_URL"
 - !private "Alamofire"
 - "AssignmentPrecedence"
 - "CurrentWeather"
 - !private "Date"
 - !private "DateFormatter"
 - "Double"
-- !private "FORECAST_API_URL"
 - !private "JSON"
 - "String"
 - !private "StringLiteralType"
@@ -39,21 +39,21 @@ depends-member:
 - !private ["s10ComparableP", "rounded"]
 - !private ["s10ComparableP", "stringValue"]
 - !private ["s10ComparableP", "subscript"]
+- !private ["16Weather_Forecast07CurrentA0C", "API_URL"]
 - !private ["16Weather_Forecast07CurrentA0C", "Alamofire"]
 - !private ["16Weather_Forecast07CurrentA0C", "Date"]
 - !private ["16Weather_Forecast07CurrentA0C", "DateFormatter"]
 - ["16Weather_Forecast07CurrentA0C", "Double"]
-- !private ["16Weather_Forecast07CurrentA0C", "FORECAST_API_URL"]
 - !private ["16Weather_Forecast07CurrentA0C", "JSON"]
 - ["16Weather_Forecast07CurrentA0C", "String"]
-- ["16Weather_Forecast07CurrentA0C", "_cityName"]
-- ["16Weather_Forecast07CurrentA0C", "_currentTemp"]
-- ["16Weather_Forecast07CurrentA0C", "_date"]
-- ["16Weather_Forecast07CurrentA0C", "_weatherType"]
+- ["16Weather_Forecast07CurrentA0C", "cityName"]
+- ["16Weather_Forecast07CurrentA0C", "currentTemp"]
+- ["16Weather_Forecast07CurrentA0C", "date"]
 - ["16Weather_Forecast07CurrentA0C", "deinit"]
-- ["16Weather_Forecast07CurrentA0C", "downloadCurrentWeather"]
+- ["16Weather_Forecast07CurrentA0C", "downloadCurrentWeathers"]
 - ["16Weather_Forecast07CurrentA0C", "init"]
 - !private ["16Weather_Forecast07CurrentA0C", "print"]
+- ["16Weather_Forecast07CurrentA0C", "weatherType"]
 - !private ["s28CustomDebugStringConvertibleP", "dateStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "double"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
@@ -348,4 +348,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "8318c7934ef0127bb0be3ab2cb1ed4d3"
+interface-hash: "83c0e6599ee3196654389dc0f9932e25"
