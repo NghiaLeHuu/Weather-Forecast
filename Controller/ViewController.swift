@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var specialBG: UIImageView!
     
     //Variables
+    let locationManager = CLLocationManager()
     
     
     //Constants
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ForeCastTableView: UITableView!
     
+    // run it first
     override func viewDidLoad() {
         super.viewDidLoad()
         currentWeather = CurrentWeather()
