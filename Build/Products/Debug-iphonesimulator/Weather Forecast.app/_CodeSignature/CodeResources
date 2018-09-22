@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		LGDY0ajojXONQD4JPhL5GpS+TA8=
+		XVlTstZnMViaY0Svue9SnF71uLE=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		Zk00uGMsaXC7q3REC2tcAAJ+P5w=
+		+cCAvVbD5KBlulz6yJRr/oeGw0c=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		aM92Egm7Y8KQwa2Zw2up6Bmifj8=
+		bSf6J4lNhXT3imOufZmOXFJKLVM=
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
@@ -147,7 +147,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nt4NwOhxbRcYQih2CR+qs03La7goaHjV29RTp/b9NkM=
+			P7BLCKx0Sk8xWocnzGRfiNbALOI1kDPJuAV4ZK1BBmQ=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -175,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zTyQtdFwiqNsxt53kYXZwGxilwhogjDvW/dEHU+zIl0=
+			x/vgtm+A93M//XzDdojx/4IxChycLeG4RmPvRcyEdhk=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -189,7 +189,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r2tZRIQQQL5EPGomHZJSeVLaGUW/bZInrfpkJxWov08=
+			YRmB5YZt8dbWpPYYotxAVrcBmu0Fcps5isYdnT1bjSg=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
