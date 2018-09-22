@@ -1,186 +1,138 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "ForecastWeather"
 provides-nominal:
+- "16Weather_Forecast0bA0C"
 provides-member:
-- ["Sd", ""]
-- ["10Foundation4DateV", ""]
-- ["Sd", "rounded"]
-- ["10Foundation4DateV", "dayOfTheWeek"]
+- ["16Weather_Forecast0bA0C", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "*"
-- !private "/"
+- !private "-"
+- "AnyObject"
 - "AssignmentPrecedence"
-- "Date"
+- "CastingPrecedence"
+- !private "Date"
 - !private "DateFormatter"
+- "Dictionary"
 - "Double"
-- !private "FloatLiteralType"
-- "Int"
+- "ForecastWeather"
 - "String"
 - !private "StringLiteralType"
-- !private "pow"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s19BinaryFloatingPointP", "Double"]
-- !private ["s19BinaryFloatingPointP", "init"]
-- !private ["s19BinaryFloatingPointP", "pow"]
 - !private ["s19BinaryFloatingPointP", "rounded"]
-- !private ["s7CVarArgP", "Double"]
-- !private ["s7CVarArgP", "dateFormat"]
+- !private ["s7CVarArgP", "dateStyle"]
 - !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "pow"]
 - !private ["s7CVarArgP", "rounded"]
-- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "subscript"]
 - !private ["s10CollectionP", "init"]
-- !private ["s10ComparableP", "DateFormatter"]
-- !private ["s10ComparableP", "Double"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "dayOfTheWeek"]
 - !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "pow"]
 - !private ["s10ComparableP", "rounded"]
-- !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
-- !private ["s28CustomDebugStringConvertibleP", "Double"]
-- !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
+- !private ["s28CustomDebugStringConvertibleP", "dateStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "dayOfTheWeek"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "pow"]
 - !private ["s28CustomDebugStringConvertibleP", "rounded"]
-- !private ["s28CustomDebugStringConvertibleP", "string"]
-- !private ["s29CustomPlaygroundQuickLookableP", "DateFormatter"]
-- !private ["s29CustomPlaygroundQuickLookableP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "dayOfTheWeek"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "pow"]
 - !private ["s29CustomPlaygroundQuickLookableP", "rounded"]
-- !private ["s17CustomReflectableP", "DateFormatter"]
-- !private ["s17CustomReflectableP", "Double"]
+- !private ["s17CustomReflectableP", "dayOfTheWeek"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "pow"]
 - !private ["s17CustomReflectableP", "rounded"]
-- !private ["s23CustomStringConvertibleP", "DateFormatter"]
-- !private ["s23CustomStringConvertibleP", "Double"]
-- !private ["s23CustomStringConvertibleP", "dateFormat"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "dateStyle"]
+- !private ["s23CustomStringConvertibleP", "dayOfTheWeek"]
 - !private ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "pow"]
 - !private ["s23CustomStringConvertibleP", "rounded"]
-- !private ["s23CustomStringConvertibleP", "string"]
-- !private ["10Foundation4DateV", "DateFormatter"]
-- ["10Foundation4DateV", "String"]
-- ["10Foundation4DateV", "dayOfTheWeek"]
-- !private ["So13DateFormatterC", "dateFormat"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation4DateV", "dayOfTheWeek"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["So13DateFormatterC", "dateStyle"]
 - !private ["So13DateFormatterC", "init"]
-- !private ["So13DateFormatterC", "string"]
-- !private ["s9DecodableP", "DateFormatter"]
-- !private ["s9DecodableP", "Double"]
+- !private ["s9DecodableP", "dayOfTheWeek"]
 - !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "pow"]
 - !private ["s9DecodableP", "rounded"]
-- ["Sd", "Double"]
-- ["Sd", "Int"]
-- !private ["Sd", "init"]
-- !private ["Sd", "pow"]
-- ["Sd", "rounded"]
-- !private ["s9EncodableP", "DateFormatter"]
-- !private ["s9EncodableP", "Double"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["Sd", "rounded"]
+- !private ["s9EncodableP", "dayOfTheWeek"]
 - !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "pow"]
 - !private ["s9EncodableP", "rounded"]
-- !private ["s9EquatableP", "DateFormatter"]
-- !private ["s9EquatableP", "Double"]
-- !private ["s9EquatableP", "dateFormat"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "dateStyle"]
+- !private ["s9EquatableP", "dayOfTheWeek"]
 - !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "pow"]
+- !private ["s9EquatableP", "medium"]
 - !private ["s9EquatableP", "rounded"]
-- !private ["s9EquatableP", "string"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s25ExpressibleByFloatLiteralP", "Double"]
-- !private ["s25ExpressibleByFloatLiteralP", "init"]
-- !private ["s25ExpressibleByFloatLiteralP", "pow"]
 - !private ["s25ExpressibleByFloatLiteralP", "rounded"]
-- !private ["s27ExpressibleByIntegerLiteralP", "Double"]
-- !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- !private ["s27ExpressibleByIntegerLiteralP", "pow"]
 - !private ["s27ExpressibleByIntegerLiteralP", "rounded"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s13FloatingPointP", "Double"]
-- !private ["s13FloatingPointP", "init"]
-- !private ["s13FloatingPointP", "pow"]
 - !private ["s13FloatingPointP", "rounded"]
-- !private ["So9FormatterC", "dateFormat"]
+- ["16Weather_Forecast0bA0C", "AnyObject"]
+- !private ["16Weather_Forecast0bA0C", "Date"]
+- !private ["16Weather_Forecast0bA0C", "DateFormatter"]
+- ["16Weather_Forecast0bA0C", "Dictionary"]
+- ["16Weather_Forecast0bA0C", "Double"]
+- ["16Weather_Forecast0bA0C", "String"]
+- ["16Weather_Forecast0bA0C", "date"]
+- ["16Weather_Forecast0bA0C", "deinit"]
+- ["16Weather_Forecast0bA0C", "init"]
+- ["16Weather_Forecast0bA0C", "temp"]
+- !private ["So9FormatterC", "dateStyle"]
 - !private ["So9FormatterC", "init"]
-- !private ["So9FormatterC", "string"]
-- !private ["s8HashableP", "DateFormatter"]
-- !private ["s8HashableP", "Double"]
-- !private ["s8HashableP", "dateFormat"]
+- !private ["s8HashableP", "dateStyle"]
+- !private ["s8HashableP", "dayOfTheWeek"]
 - !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "pow"]
+- !private ["s8HashableP", "medium"]
 - !private ["s8HashableP", "rounded"]
-- !private ["s8HashableP", "string"]
 - !private ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
-- !private ["s25LosslessStringConvertibleP", "Double"]
 - !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s25LosslessStringConvertibleP", "pow"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["So8NSCodingP", "dateFormat"]
+- !private ["So8NSCodingP", "dateStyle"]
 - !private ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "string"]
-- !private ["So9NSCopyingP", "dateFormat"]
+- !private ["So9NSCopyingP", "dateStyle"]
 - !private ["So9NSCopyingP", "init"]
-- !private ["So9NSCopyingP", "string"]
-- !private ["So8NSObjectC", "dateFormat"]
+- !private ["So8NSObjectC", "dateStyle"]
 - !private ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "string"]
-- !private ["So16NSObjectProtocolP", "dateFormat"]
+- !private ["So16NSObjectProtocolP", "dateStyle"]
 - !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "string"]
-- !private ["s7NumericP", "Double"]
-- !private ["s7NumericP", "init"]
-- !private ["s7NumericP", "pow"]
 - !private ["s7NumericP", "rounded"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["10Foundation20ReferenceConvertibleP", "DateFormatter"]
+- !private ["s16RawRepresentableP", "medium"]
+- !private ["10Foundation20ReferenceConvertibleP", "dayOfTheWeek"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["s8SequenceP", "init"]
-- !private ["s13SignedNumericP", "Double"]
-- !private ["s13SignedNumericP", "init"]
-- !private ["s13SignedNumericP", "pow"]
+- !private ["s8SequenceP", "subscript"]
 - !private ["s13SignedNumericP", "rounded"]
-- !private ["s10StrideableP", "Double"]
-- !private ["s10StrideableP", "init"]
-- !private ["s10StrideableP", "pow"]
 - !private ["s10StrideableP", "rounded"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
+- !private ["So13DateFormatterC5StyleO", "medium"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["9Alamofire14URLConvertibleP", "init"]
-- !private ["s15_CVarArgAlignedP", "Double"]
-- !private ["s15_CVarArgAlignedP", "init"]
-- !private ["s15_CVarArgAlignedP", "pow"]
 - !private ["s15_CVarArgAlignedP", "rounded"]
-- !private ["s22_CVarArgPassedAsDoubleP", "Double"]
-- !private ["s22_CVarArgPassedAsDoubleP", "init"]
-- !private ["s22_CVarArgPassedAsDoubleP", "pow"]
 - !private ["s22_CVarArgPassedAsDoubleP", "rounded"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
-- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
-- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "pow"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "Double"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pow"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
-- !private ["s21_ObjectiveCBridgeableP", "DateFormatter"]
-- !private ["s21_ObjectiveCBridgeableP", "Double"]
+- !private ["s21_ObjectiveCBridgeableP", "dayOfTheWeek"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "pow"]
 - !private ["s21_ObjectiveCBridgeableP", "rounded"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
@@ -192,18 +144,21 @@ depends-nominal:
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
-- "10Foundation4DateV"
+- !private "10Foundation4DateV"
 - !private "So13DateFormatterC"
 - !private "s9DecodableP"
-- "Sd"
+- !private "s10DictionaryV"
+- !private "Sd"
 - !private "s9EncodableP"
 - !private "s9EquatableP"
+- !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s13FloatingPointP"
+- "16Weather_Forecast0bA0C"
 - !private "So9FormatterC"
 - !private "s8HashableP"
 - !private "10SwiftyJSON17JSONSubscriptTypeP"
@@ -215,12 +170,14 @@ depends-nominal:
 - !private "So16NSObjectProtocolP"
 - !private "s7NumericP"
 - !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "s8SequenceP"
 - !private "s13SignedNumericP"
 - !private "s10StrideableP"
 - !private "SS"
 - !private "s14StringProtocolP"
+- !private "So13DateFormatterC5StyleO"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "9Alamofire14URLConvertibleP"
@@ -271,4 +228,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "dc8dae0ed05c8a3741e4c8b1841e05d8"
+interface-hash: "ffb250fc1f2dde34866214a9d1a3457a"
