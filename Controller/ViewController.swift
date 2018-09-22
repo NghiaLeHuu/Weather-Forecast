@@ -28,6 +28,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     //Constants
     var currentWeather: CurrentWeather!
     var forecastArray = [ForecastWeather]()
+    var currentLocation:CLLocation!
     
     
     @IBOutlet weak var ForeCastTableView: UITableView!
@@ -48,6 +49,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
         downloadForecastWeather {
             print("DATA DOWNLOADED")
         }
+        setupLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +57,62 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
         // Dispose of any resources that can be recreated.
     }
    
+    func setupLocation(){
+        
+        locationManager.requestWhenInUseAuthorization() // Take permission from the user
+        
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
+        //        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //        locationManager.requestWhenInUseAuthorization() // Take Permission from the user
+        //        locationManager.startMonitoringSignificantLocationChanges()
+    }
+    
+    var i:Int = 0
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //print(locationManager.location?.coordinate.latitude)
+        //print(locationManager.location?.coordinate.longitude)
+        
+        if(i == 0 ){
+            locationAuthCheck()
+            i = i + 1
+        }
+        
+    }
+    
+    func locationAuthCheck() {
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            // Get the location from the device
+            currentLocation = locationManager.location!
+            print(currentLocation.coordinate.latitude)
+            print(currentLocation.coordinate.longitude)
+            
+            // Pass the location coord to our API
+            
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            
+            // Download the API Data
+            
+            currentWeather.downloadCurrentWeathers {
+                
+                self.cityName.text = self.currentWeather.cityName
+                self.weatherType.text = self.currentWeather.weatherType
+                self.currentCityTemp.text = "\(Int(self.currentWeather.currentTemp))"
+                self.currentDate.text = self.currentWeather.date
+            }
+            
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthCheck()
+        }
+    }
 
     
     
