@@ -28,16 +28,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var currentWeather: CurrentWeather!
     var currentLocation: CLLocation!
     
+    // run it first
     override func viewDidLoad() {
         super.viewDidLoad()
         currentWeather = CurrentWeather()
-//        currentWeather.downloadCurrentWeather {
-//            self.cityName.text = self.currentWeather._cityName
-//            self.weatherType.text = self.currentWeather._weatherType
-//            self.currentCityTemp.text = "\(Int(self.currentWeather._currentTemp))"
-//            self.currentDate.text = self.currentWeather._date
-//        }
-        print("Data Downloaded")
+        setupLocation()
         
     }
 
@@ -46,6 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Request privacy location
     func setupLocation() {
         locationManager.requestWhenInUseAuthorization()
         
@@ -53,7 +49,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startMonitoringSignificantLocationChanges()
+            //locationManager.startUpdatingLocation()
         }
+    }
+    
+    // Get a x, y
+    var i: Int = 0
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        
+        currentLocation = locationManager.location!
+        
+        print(currentLocation.coordinate.latitude)
+        print(currentLocation.coordinate.longitude)
+        locationAuthCheck()
+    
+//        if i == 0 {
+//            locationAuthCheck()
+//            i = i + 1
+//        }
     }
     
     func locationAuthCheck() {
@@ -85,15 +99,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    var i: Int = 0
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locationManager.location!
-
-        if i == 0 {
-            locationAuthCheck()
-            i = i + 1
-        }
-    }
     
 
 }
