@@ -64,24 +64,21 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
+            locationManager.startMonitoringSignificantLocationChanges()
+            //locationManager.startUpdatingLocation()
         }
-        
-        //        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //        locationManager.requestWhenInUseAuthorization() // Take Permission from the user
-        //        locationManager.startMonitoringSignificantLocationChanges()
     }
     
-    var i:Int = 0
+    //var i:Int = 0
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //print(locationManager.location?.coordinate.latitude)
-        //print(locationManager.location?.coordinate.longitude)
         
-        if(i == 0 ){
-            locationAuthCheck()
-            i = i + 1
-        }
+        locationAuthCheck()
+        
+//        if(i == 0 ){
+//            locationAuthCheck()
+//            i = i + 1
+//        }
         
     }
     
