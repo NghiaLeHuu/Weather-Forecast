@@ -2,7 +2,7 @@
 //  HourByHourCell.swift
 //  Weather Forecast
 //
-//  Created by My Vo on 9/23/18.
+//  Created by Tuong on 9/23/18.
 //  Copyright © 2018 Nghia. All rights reserved.
 //
 
