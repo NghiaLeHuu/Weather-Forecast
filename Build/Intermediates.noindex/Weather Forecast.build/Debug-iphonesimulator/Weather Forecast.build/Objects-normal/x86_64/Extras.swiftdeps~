@@ -6,7 +6,6 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "API_URL"
 - "FORECAST_API_URL"
 - "Location"
 - "StringLiteralType"
@@ -27,9 +26,6 @@ depends-member:
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s8HashableP", "init"]
 - ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
-- ["16Weather_Forecast8LocationC", "latitude"]
-- ["16Weather_Forecast8LocationC", "longitude"]
-- ["16Weather_Forecast8LocationC", "sharedInstance"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
 - ["s26RangeReplaceableCollectionP", "init"]
@@ -63,7 +59,6 @@ depends-nominal:
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
 - "10SwiftyJSON17JSONSubscriptTypeP"
-- "16Weather_Forecast8LocationC"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - "s26RangeReplaceableCollectionP"
