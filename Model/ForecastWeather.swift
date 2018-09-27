@@ -19,9 +19,12 @@ class ForecastWeather{
                 self.temp = rawValue
             }
         }
+        
+        //Access to the JSON to get the data of date
         if let date = weatherDict["dt"] as? Double {
-            
+            //Convert date from timestamp to date to display
             let rawDate = Date(timeIntervalSince1970: date)
+            //Adjust the format to display in the UI
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
             

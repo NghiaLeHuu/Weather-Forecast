@@ -32,7 +32,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     
     @IBOutlet weak var ForeCastTableView: UITableView!
     
-    // run it first
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentWeather = CurrentWeather()
@@ -50,7 +50,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     func setupLocation(){
         
         locationManager.requestWhenInUseAuthorization() // Take permission from the user
-        
+        //Moving to this step after having permission from the user
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -73,11 +73,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             // Get the location from the device
             currentLocation = locationManager.location!
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
             
             // Pass the location coord to our API
-            
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
             
@@ -94,8 +91,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
             downloadForecastWeather {
                 print("DATA DOWNLOADED")
             }
-            
-            
+            //The user doesn't allow to take the permission
         } else {
             locationManager.requestWhenInUseAuthorization()
             locationAuthCheck()
@@ -106,15 +102,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     
     func downloadForecastWeather(completed: @escaping ()->()) {
         Alamofire.request(FORECAST_API_URL).responseJSON { (response) in
+            //Taking the data from the API
             let result = response.result
-            //print(result.value)
+            //Taking forecast weather data for 7 days
             if let dic = result.value as? Dictionary<String, AnyObject> {
-                
                 if let list = dic["list"] as? [Dictionary<String, AnyObject>] {
                     for item in list {
                         let forecast = ForecastWeather(weatherDict: item)
-                        //print(forecast.date)
-                        //print(forecast.temp)
                         self.forecastArray.append(forecast)
                     }
                     self.forecastArray.remove(at: 0)
@@ -131,7 +125,6 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell") as! forecastCell
-        //cell.configureCell(temp:10,day:"mn")
         cell.configureCell(forecastData: forecastArray[indexPath.row])
         return cell
     }

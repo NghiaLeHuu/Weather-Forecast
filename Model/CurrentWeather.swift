@@ -26,37 +26,35 @@ class CurrentWeather {
     
     
     func downloadCurrentWeathers(completed:@escaping ()->()){
-        // Using Alamofire
+        
+        // Using Alamofire to access the API
         Alamofire.request(API_URL).responseJSON { (response) in
             let result = response.result
             
+            //Download data from API
             let json = JSON(result.value!)
             print(result.value!)
+            
             // get CityName
             self.cityName = json["name"].stringValue
-            //print(self.cityName)
             
             // get weatherType
             self.weatherType = json["weather"][0]["main"].stringValue
-            //print(self.weatherType)
             
             // get currentTemp
             let downloadedTemp = json["main"]["temp"].double
             self.currentTemp = (downloadedTemp! - 273.15).rounded(toPlaces: 0)
-            //print(self.currentTemp)
             
             // get date
             let tempDate = json["dt"].double
-            //print(tempDate)
+            //Convert date to timestamp
             let convertDate = Date(timeIntervalSince1970: tempDate!)
-            //print(convertDate)
-            
+            //Adjust format of date when it displays in the UI
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
             dateFormatter.timeStyle = .none
             
             self.date = dateFormatter.string(from: convertDate)
-            //print(self.date)
             
             completed()
         }

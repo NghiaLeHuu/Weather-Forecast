@@ -49,7 +49,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Check if the list is empty
         if UserDefaults.standard.object(forKey: "arrLocation") == nil{
             // do nothing then move to else statement
         }else{
@@ -85,7 +85,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
             if error == nil{
                 if let location = placemarks?.first?.location{
-                    
+                    //Print the latitude and longtitude of the location is searched
                     print(location.coordinate.latitude)
                     print(location.coordinate.longitude)
                     

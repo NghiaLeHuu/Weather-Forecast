@@ -11,8 +11,10 @@ import Alamofire
 
 class HourByHourViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
+    //Variables
     var arrHourly:[HourByHourWeather] = []
     
+    //Outlets
     @IBOutlet weak var HourByHourTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,18 +26,16 @@ class HourByHourViewController: UIViewController,UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "HourByHour", for: indexPath) as! HourByHourCell
         cell.time.text = String(arrHourly[indexPath.row].hour)
         cell.summary.text = arrHourly[indexPath.row].summary
-        cell.temp.text = String(arrHourly[indexPath.row].temp) + " °C"
+        cell.temp.text = String(arrHourly[indexPath.row].temp) + "°C"
         return cell
     }
     
     
     func downloadHourByHourtWeather(completed: @escaping ()->()) {
-        //let HOUR_API_URL = "https://api.darksky.net/forecast/65bf210f4c02766ee3128f1b1728a557/10.83,-106.67"
-        print(HOUR_API_URL)
         Alamofire.request(HOUR_API_URL).responseJSON { (response) in
-            
+            //Taking data from the API
             let result = response.result
-            
+            //Taking hourly weather data from the API
             if let dic = result.value as? [String:Any]{
                 if let hourly = dic["hourly"] as? [String:Any]{
                     if let hourlyData = hourly["data"] as? [[String:Any]]{
@@ -63,16 +63,4 @@ class HourByHourViewController: UIViewController,UITableViewDataSource, UITableV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

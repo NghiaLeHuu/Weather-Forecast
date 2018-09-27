@@ -12,8 +12,10 @@ import SwiftyJSON
 
 class WeatherHistoryViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
+    //Outlets
     @IBOutlet weak var weatherHistoryTableView: UITableView!
     
+    //Variables
     var arrHistoryDay:[Int] = []
     var currentTime:Int!
     var arrHistoryAPIURL:[String] = []
@@ -25,10 +27,8 @@ class WeatherHistoryViewController: UIViewController, UITableViewDelegate,UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherHistory", for: indexPath) as! weatherHistoryCell
-        
         cell.time.text = arrWeatherHistory[indexPath.row].time
         cell.temp.text = String(arrWeatherHistory[indexPath.row].temp)
-        
         return cell
         
     }
@@ -36,17 +36,12 @@ class WeatherHistoryViewController: UIViewController, UITableViewDelegate,UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         weatherHistoryTableView.delegate = self
-        
         currentTimeWeather()
-        
-        // Do any additional setup after loading the view.
     }
     
     
     @IBAction func reloadTableView(_ sender: Any) {
-       
         weatherHistoryTableView.reloadData()
         print("reload data")
     }
@@ -57,29 +52,21 @@ class WeatherHistoryViewController: UIViewController, UITableViewDelegate,UITabl
     }
     
     func RunFinished(arr:[Any], co: @escaping ()->()) {
-        
         for item in self.arrHistoryAPIURL{
-            
             let weatherHistory = WeatherHistory()
-            
-            weatherHistory.downloadWeatherHistory(HISTORY_API_ULR: item, completed: {
-                
+            weatherHistory.downloadWeatherHistory(HISTORY_API_URL: item, completed: {
                 self.arrWeatherHistory.append(weatherHistory)
-                // sort 
-                
+                // sort
+               
                 print(self.arrWeatherHistory)
-                
             })
-
         }
         co()
     }
     
     func currentTimeWeather(){
-        
         let _currentTime = CurrentTime()
         _currentTime.getCurrentTime(completed: {
-            
             // get 7 days past time
             for index in 1...7{
                 let thePastDate = _currentTime.currentTime - (index) *  86400
@@ -90,13 +77,10 @@ class WeatherHistoryViewController: UIViewController, UITableViewDelegate,UITabl
             for item in self.arrHistoryDay{
                 let HISTORY_API_URL = "https://api.darksky.net/forecast/65bf210f4c02766ee3128f1b1728a557/\(Location.sharedInstance.latitude!),\(Location.sharedInstance.longitude!),\(item)"
                 self.arrHistoryAPIURL.append(HISTORY_API_URL)
-                print(HISTORY_API_URL)
+               // print(HISTORY_API_URL)
             }
-            
-            //
-            
+            //reload the data
             self.RunFinished(arr: self.arrHistoryAPIURL, co: {
-                //print("run fi")
                 self.weatherHistoryTableView.reloadData()
             })
            

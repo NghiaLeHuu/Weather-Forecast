@@ -18,12 +18,12 @@ class CurrentTime {
     func getCurrentTime(completed: @escaping ()->()) {
         print(HOUR_API_URL)
         Alamofire.request(HOUR_API_URL).responseJSON { (response) in
+            //Using Alamofire to get data from the API
             let result = response.result
             let json = JSON(result.value!)
+            //Get current time data from the JSON
             let _currentTime = json["currently"]["time"].int
             self.currentTime = _currentTime
-            //self.currentTime = json["currently"]["time"].double
-            //print(self.currentTime)
             
             completed()
         }
