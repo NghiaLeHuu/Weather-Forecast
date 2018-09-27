@@ -28,6 +28,9 @@
  https://teamtreehouse.com/community/how-can-i-pass-the-latitude-and-longitude-data-from-cllocationmanager-delegate-to-forecasturl
  https://stackoverflow.com/questions/40648284/converting-a-unix-timestamp-into-date-as-string-swift
  https://stackoverflow.com/questions/28854066/convert-timestamp-into-nsdate-swift/37416339#37416339
+ https://developer.apple.com/documentation/corelocation
+ https://www.oodlestechnologies.com/blogs/How-to-Use-Core-Location-in-iOS-Swift
+ https://www.raywenderlich.com/5247-core-location-tutorial-for-ios-tracking-visited-locations
  */
 
 import UIKit
