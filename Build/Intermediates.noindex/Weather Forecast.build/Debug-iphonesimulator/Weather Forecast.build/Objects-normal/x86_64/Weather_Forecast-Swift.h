@@ -238,6 +238,7 @@ SWIFT_CLASS("_TtC16Weather_Forecast18SearchLocationCell")
 @end
 
 @class UISearchBar;
+@class UITableViewRowAction;
 
 SWIFT_CLASS("_TtC16Weather_Forecast20SearchViewController")
 @interface SearchViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -245,6 +246,8 @@ SWIFT_CLASS("_TtC16Weather_Forecast20SearchViewController")
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified searchWeatherTableView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)tableView:(UITableView * _Nonnull)tableView canEditRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<UITableViewRowAction *> * _Nullable)tableView:(UITableView * _Nonnull)tableView editActionsForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
@@ -278,11 +281,35 @@ SWIFT_CLASS("_TtC16Weather_Forecast14ViewController")
 @end
 
 
+SWIFT_CLASS("_TtC16Weather_Forecast28WeatherHistoryViewController")
+@interface WeatherHistoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified weatherHistoryTableView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)viewDidLoad;
+- (IBAction)reloadTableView:(id _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC16Weather_Forecast12forecastCell")
 @interface forecastCell : UITableViewCell
 - (void)awakeFromNib;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified Temp;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified Day;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC16Weather_Forecast18weatherHistoryCell")
+@interface weatherHistoryCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified time;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified temp;
+- (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

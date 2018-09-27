@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>PD66V8DP68.test.Weather-Forecast</string>
+	<string>P795ZDUNSP.test.KhoaDoan.Weather-Forecast</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>PD66V8DP68.test.Weather-Forecast</string>
+		<string>P795ZDUNSP.test.KhoaDoan.Weather-Forecast</string>
 	</array>
 </dict>
 </plist>

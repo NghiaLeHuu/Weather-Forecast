@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L3R-ZR-h2B">
-                                <rect key="frame" x="100.00000000000001" y="103" width="213.33333333333337" height="265"/>
+                                <rect key="frame" x="100.00000000000001" y="78" width="213.33333333333337" height="315"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-hR-P5m">
                                         <rect key="frame" x="0.0" y="0.0" width="213.33333333333334" height="37.333333333333336"/>
@@ -46,7 +46,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhn-la-Cc6">
-                                        <rect key="frame" x="0.0" y="177.66666666666669" width="213.33333333333334" height="37.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="177.66666666666666" width="213.33333333333334" height="37.333333333333343"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -58,6 +58,13 @@
                                         </state>
                                         <connections>
                                             <segue destination="aj1-zN-uyM" kind="push" id="KJx-VP-TRS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCe-4x-RD2">
+                                        <rect key="frame" x="0.0" y="285" width="213.33333333333334" height="30"/>
+                                        <state key="normal" title="View weather history"/>
+                                        <connections>
+                                            <segue destination="iWD-cd-1Kx" kind="push" id="ere-5c-qng"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -323,7 +330,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-2i-b1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="289"/>
+            <point key="canvasLocation" x="1983" y="43"/>
+        </scene>
+        <!--Weather History View Controller-->
+        <scene sceneID="RfF-ra-1Fg">
+            <objects>
+                <viewController id="iWD-cd-1Kx" customClass="WeatherHistoryViewController" customModule="Weather_Forecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JvH-R1-cqm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="7LT-Hl-hU7">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ta-Bd-wuA">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="weatherHistory" rowHeight="71" id="mZ2-JR-J2n" customClass="weatherHistoryCell" customModule="Weather_Forecast" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mZ2-JR-J2n" id="fRz-Yb-d4U">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-kh-x9b">
+                                                    <rect key="frame" x="297" y="22" width="53" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-UE-GRj">
+                                                    <rect key="frame" x="20" y="22" width="210" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="temp" destination="TPt-kh-x9b" id="Vgv-KA-Rpe"/>
+                                            <outlet property="time" destination="QVH-UE-GRj" id="lDS-SW-3hb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iWD-cd-1Kx" id="CxJ-Om-rSi"/>
+                                    <outlet property="delegate" destination="iWD-cd-1Kx" id="FeS-SB-TUe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7EZ-tZ-4nk" firstAttribute="trailing" secondItem="7LT-Hl-hU7" secondAttribute="trailing" id="2Yu-gV-dSK"/>
+                            <constraint firstItem="7EZ-tZ-4nk" firstAttribute="trailing" secondItem="5Ta-Bd-wuA" secondAttribute="trailing" id="7ET-Gc-Xvy"/>
+                            <constraint firstItem="5Ta-Bd-wuA" firstAttribute="leading" secondItem="7EZ-tZ-4nk" secondAttribute="leading" id="9Ze-js-wiN"/>
+                            <constraint firstItem="7EZ-tZ-4nk" firstAttribute="bottom" secondItem="5Ta-Bd-wuA" secondAttribute="bottom" id="Tdw-Qr-K3e"/>
+                            <constraint firstItem="7LT-Hl-hU7" firstAttribute="top" secondItem="7EZ-tZ-4nk" secondAttribute="top" id="cOq-zz-HA5"/>
+                            <constraint firstItem="5Ta-Bd-wuA" firstAttribute="top" secondItem="7EZ-tZ-4nk" secondAttribute="top" id="tVM-Rn-3Kd"/>
+                            <constraint firstItem="7LT-Hl-hU7" firstAttribute="leading" secondItem="7EZ-tZ-4nk" secondAttribute="leading" id="wPi-Sa-FxV"/>
+                            <constraint firstItem="7EZ-tZ-4nk" firstAttribute="bottom" secondItem="7LT-Hl-hU7" secondAttribute="bottom" id="zBG-OV-NMW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7EZ-tZ-4nk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tKq-uD-qS8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KWI-TJ-08f">
+                            <connections>
+                                <action selector="reloadTableView:" destination="iWD-cd-1Kx" id="saj-wP-l5f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="weatherHistoryTableView" destination="5Ta-Bd-wuA" id="Vbk-vF-xXo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL6-ue-u1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.6376811594205" y="896.73913043478262"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V1i-b5-pkS">
