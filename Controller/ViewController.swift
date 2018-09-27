@@ -86,7 +86,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
                 
                 self.cityName.text = self.currentWeather.cityName
                 self.weatherType.text = self.currentWeather.weatherType
-                self.currentCityTemp.text = "\(Int(self.currentWeather.currentTemp))"
+                self.currentCityTemp.text = "\(Int(self.currentWeather.currentTemp))" + "°C"
                 self.currentDate.text = self.currentWeather.date
             }
             

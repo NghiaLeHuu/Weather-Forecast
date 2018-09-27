@@ -13,6 +13,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     
     @IBOutlet weak var searchBar: UISearchBar!
     var arrSearchWeather:[SearchLocationWeather] = []
+     var arrLocation:[String] = []
     
     @IBOutlet weak var searchWeatherTableView: UITableView!
     
@@ -29,10 +30,37 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteButton = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "Delete") { (rowAction, indexPath) in
+            self.arrSearchWeather.remove(at: indexPath.row)
+            self.arrLocation.remove(at: indexPath.row)
+            UserDefaults.standard.set(self.arrLocation, forKey: "arrLocation")
+            self.searchWeatherTableView.reloadData()
+        }
+        
+        deleteButton.backgroundColor = UIColor.red
+        return [deleteButton]
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateWeatherForLocation(location: "New York")
+        if UserDefaults.standard.object(forKey: "arrLocation") == nil{
+            // do nothing then move to else statement
+        }else{
+            //Get data from UserDefaults then save to arrLocation
+            arrLocation = UserDefaults.standard.object(forKey: "arrLocation") as! [String]
+            //Get data from API then pass the data to the arrLocation from UserDefaults
+            for item in arrLocation{
+                updateWeatherForLocation(location: item)
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +72,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         searchBar.resignFirstResponder()
         if let locationString = searchBar.text, !locationString.isEmpty {
             updateWeatherForLocation(location: locationString)
+            // Saving data
+            arrLocation.append(locationString)
+            UserDefaults.standard.set(arrLocation, forKey: "arrLocation")
         }
     }
     
@@ -61,9 +92,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
                     let searchWeather = SearchLocationWeather()
                     
                     searchWeather.downloadSearchLocationWeather(LocationString: locationString, withLocationCoordinate: location.coordinate, completed: {
-                        
-                        print(searchWeather.Location)
-                        print(searchWeather.Temp)
                         
                         self.arrSearchWeather.append(searchWeather)
                         self.searchWeatherTableView.reloadData()
