@@ -57,38 +57,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L3R-ZR-h2B">
-                                <rect key="frame" x="114" y="53.666666666666657" width="186" height="293"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="L3R-ZR-h2B">
+                                <rect key="frame" x="123.66666666666667" y="153.66666666666666" width="166.66666666666663" height="163.99999999999997"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-hR-P5m">
-                                        <rect key="frame" x="0.0" y="0.0" width="186" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="29"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcC-AF-n6P">
-                                        <rect key="frame" x="0.0" y="29.000000000000007" width="186" height="29"/>
+                                        <rect key="frame" x="0.0" y="32" width="166.66666666666666" height="29"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partlysunny" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-pQ-RjR">
-                                        <rect key="frame" x="0.0" y="58" width="186" height="141"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-VR-8HD">
-                                        <rect key="frame" x="0.0" y="199" width="186" height="35"/>
+                                        <rect key="frame" x="0.0" y="64" width="166.66666666666666" height="35"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhn-la-Cc6">
-                                        <rect key="frame" x="0.0" y="234.00000000000003" width="186" height="28.999999999999972"/>
+                                        <rect key="frame" x="0.0" y="102" width="166.66666666666666" height="29"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqz-zI-SXX">
-                                        <rect key="frame" x="0.0" y="263" width="186" height="30"/>
+                                        <rect key="frame" x="0.0" y="134.00000000000003" width="166.66666666666666" height="30"/>
                                         <state key="normal" title="View more hour by hour">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -101,7 +98,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L3R-ZR-h2B" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1/2" id="EO9-4g-FMR"/>
+                            <constraint firstItem="L3R-ZR-h2B" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1:1.7" id="EO9-4g-FMR"/>
                             <constraint firstItem="HHD-4A-Mpt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IHT-0G-Xvg"/>
                             <constraint firstItem="HHD-4A-Mpt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="To5-4X-AeO"/>
                             <constraint firstItem="L3R-ZR-h2B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g4y-Cd-S9F"/>
@@ -123,7 +120,6 @@
                         <outlet property="currentCityTemp" destination="aMl-VR-8HD" id="qnc-FK-aUa"/>
                         <outlet property="currentDate" destination="OcC-AF-n6P" id="zdt-hO-Nnm"/>
                         <outlet property="specialBG" destination="HHD-4A-Mpt" id="vg4-ep-DZ4"/>
-                        <outlet property="weatherImage" destination="qmn-pQ-RjR" id="XhK-X0-bX1"/>
                         <outlet property="weatherType" destination="W95-hR-P5m" id="qYc-rq-eaH"/>
                     </connections>
                 </viewController>
@@ -334,6 +330,5 @@
     <resources>
         <image name="bg" width="414" height="946"/>
         <image name="bgHourByHour" width="411" height="443"/>
-        <image name="partlysunny" width="186" height="141"/>
     </resources>
 </document>

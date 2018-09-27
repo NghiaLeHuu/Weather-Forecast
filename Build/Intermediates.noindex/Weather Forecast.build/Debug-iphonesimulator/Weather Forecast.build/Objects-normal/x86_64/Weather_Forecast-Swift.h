@@ -260,7 +260,6 @@ SWIFT_CLASS("_TtC16Weather_Forecast14ViewController")
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified cityName;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified weatherType;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified weatherImage;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentCityTemp;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentDate;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified specialBG;

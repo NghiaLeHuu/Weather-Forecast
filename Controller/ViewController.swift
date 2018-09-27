@@ -16,7 +16,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     //Outlets
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var weatherType: UILabel!
-    @IBOutlet weak var weatherImage: UIImageView!
+   
     @IBOutlet weak var currentCityTemp: UILabel!
     @IBOutlet weak var currentDate: UILabel!
     @IBOutlet weak var specialBG: UIImageView!

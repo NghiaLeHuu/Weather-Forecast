@@ -1,10 +1,10 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "00099589d95d7cc47b7505c3dc44245a"
-build_time: [1538019035, 984763000]
+build_time: [1538019297, 385423000]
 inputs:
   "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/Extensions/Extensions.swift": [1537935510, 0]
   "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/View/forecastCell.swift": [1537935510, 0]
-  "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/Controller/ViewController.swift": [1537935510, 0]
+  "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/Controller/ViewController.swift": [1538019297, 0]
   "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/Controller/HourByHourViewController.swift": [1537935510, 0]
   "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/View/SearchLocationCell.swift": [1537935510, 0]
   "/Users/Andrew/Downloads/ForecastWeather_26:9/Weather-Forecast/Model/SearchLocationWeather.swift": [1537935510, 0]
