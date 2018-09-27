@@ -29,8 +29,7 @@ class HourByHourViewController: UIViewController,UITableViewDataSource, UITableV
         cell.temp.text = String(arrHourly[indexPath.row].temp) + "°C"
         return cell
     }
-    
-    
+    //Download forecast weather hour by hour
     func downloadHourByHourtWeather(completed: @escaping ()->()) {
         Alamofire.request(HOUR_API_URL).responseJSON { (response) in
             //Taking data from the API

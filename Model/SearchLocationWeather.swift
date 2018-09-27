@@ -18,7 +18,7 @@ class SearchLocationWeather {
 
     func downloadSearchLocationWeather(LocationString locationstr:String, withLocationCoordinate CLLocation:CLLocationCoordinate2D,completed: @escaping ()->()) {
         
-        //pass the latitude and longtitude to the API URL to get JSON data
+        //Pass the latitude and longtitude to the API URL to get JSON data
         let SEARCH_API_URL = "https://api.darksky.net/forecast/65bf210f4c02766ee3128f1b1728a557/\(CLLocation.latitude),\(CLLocation.longitude)"
         
         //print the location to check
@@ -29,10 +29,9 @@ class SearchLocationWeather {
         Alamofire.request(SEARCH_API_URL).responseJSON { (response) in
             //Using Alamofire to get data from the API
             let result = response.result
-            
+            //Using swiftJSON to get data
             let json = JSON(result.value!)
-            
-            // Get temp from the API
+            //Get temp from the API
             let _temp = json["currently"]["temperature"].double
             self.Temp = ((_temp! - 32)*5/9).rounded(toPlaces: 0)
     

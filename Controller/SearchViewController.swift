@@ -25,7 +25,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchLocation", for: indexPath) as! SearchLocationCell
         cell.Location.text = arrSearchWeather[indexPath.row].Location
-        cell.Temp.text = String(arrSearchWeather[indexPath.row].Temp) + " °C"
+        cell.Temp.text = String(arrSearchWeather[indexPath.row].Temp) + "°C"
         
         return cell
     }
@@ -34,6 +34,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         return true
     }
     
+    //Create delete button to delete the locations are searched
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteButton = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "Delete") { (rowAction, indexPath) in
             self.arrSearchWeather.remove(at: indexPath.row)
@@ -41,7 +42,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
             UserDefaults.standard.set(self.arrLocation, forKey: "arrLocation")
             self.searchWeatherTableView.reloadData()
         }
-        
+        //set the background color for the delete button
         deleteButton.backgroundColor = UIColor.red
         return [deleteButton]
     }
@@ -49,7 +50,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Check if the list is empty
+        //Check if the location list is empty
         if UserDefaults.standard.object(forKey: "arrLocation") == nil{
             // do nothing then move to else statement
         }else{
@@ -59,7 +60,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
             for item in arrLocation{
                 updateWeatherForLocation(location: item)
             }
-            
         }
     }
 
@@ -68,6 +68,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    //Create a function for search button
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let locationString = searchBar.text, !locationString.isEmpty {
@@ -78,10 +79,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         }
     }
     
+    //Find the latitude and longitude of the locations are searched
     func updateWeatherForLocation(location:String){
-        
         let locationString = location
-    
         CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
             if error == nil{
                 if let location = placemarks?.first?.location{
@@ -95,26 +95,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
                         
                         self.arrSearchWeather.append(searchWeather)
                         self.searchWeatherTableView.reloadData()
-                        
                     })
-                    
                 }
-            
             }
         }
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

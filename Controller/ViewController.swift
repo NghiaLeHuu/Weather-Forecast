@@ -23,15 +23,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     //Variables
     let locationManager = CLLocationManager()
     
-    
     //Constants
     var currentWeather: CurrentWeather!
     var forecastArray = [ForecastWeather]()
     var currentLocation:CLLocation!
     
-    
     @IBOutlet weak var ForeCastTableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,60 +43,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
-    func setupLocation(){
-        
-        locationManager.requestWhenInUseAuthorization() // Take permission from the user
-        //Moving to this step after having permission from the user
-        if CLLocationManager.locationServicesEnabled(){
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    var i:Int = 0
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    //Get location (run one time)
-        if(i == 0 ){
-            locationAuthCheck()
-            i = i + 1
-        }
-        
-    }
-    
-    func locationAuthCheck() {
-        
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            // Get the location from the device
-            currentLocation = locationManager.location!
-            
-            // Pass the location coord to our API
-            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
-            
-            // Download the API Data
-            currentWeather.downloadCurrentWeathers {
-                
-                self.cityName.text = self.currentWeather.cityName
-                self.weatherType.text = self.currentWeather.weatherType
-                self.currentCityTemp.text = "\(Int(self.currentWeather.currentTemp))" + "°C"
-                self.currentDate.text = self.currentWeather.date
-            }
-            
-            // Download the Forecast Weather
-            downloadForecastWeather {
-                print("DATA DOWNLOADED")
-            }
-            //The user doesn't allow to take the permission
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-            locationAuthCheck()
-        }
-    }
 
-    
-    
+    //Download forecast weather
     func downloadForecastWeather(completed: @escaping ()->()) {
         Alamofire.request(FORECAST_API_URL).responseJSON { (response) in
             //Taking the data from the API
@@ -111,11 +56,60 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
                         let forecast = ForecastWeather(weatherDict: item)
                         self.forecastArray.append(forecast)
                     }
+                    //Remove the first day, it is today
                     self.forecastArray.remove(at: 0)
                     self.ForeCastTableView.reloadData()
                 }
             }
             completed()
+        }
+    }
+
+   
+    func setupLocation(){
+        // Take permission from the user
+        locationManager.requestWhenInUseAuthorization()
+        //Moving to this step after having permission from the user
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    //Check the location again
+    var i:Int = 0
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //Get location (run one time)
+        if(i == 0 ){
+            locationAuthCheck()
+            i = i + 1
+        }
+    }
+    
+    func locationAuthCheck() {
+        //When the users give the privacy for using location
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            //Get the location from the device
+            currentLocation = locationManager.location!
+            //Pass the location coord to our API
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            //Download the API Data
+            currentWeather.downloadCurrentWeathers {
+                self.cityName.text = self.currentWeather.cityName
+                self.weatherType.text = self.currentWeather.weatherType
+                self.currentCityTemp.text = "\(Int(self.currentWeather.currentTemp))" + "°C"
+                self.currentDate.text = self.currentWeather.date
+            }
+            //Download the Forecast Weather
+            downloadForecastWeather {
+                print("DATA DOWNLOADED")
+            }
+            //The user doesn't allow to take the permission
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthCheck()
         }
     }
 }

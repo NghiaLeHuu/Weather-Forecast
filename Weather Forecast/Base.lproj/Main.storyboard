@@ -62,7 +62,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCe-4x-RD2">
                                         <rect key="frame" x="0.0" y="225" width="213.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="View weather history"/>
+                                        <state key="normal" title="View weather history">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="iWD-cd-1Kx" kind="push" id="ere-5c-qng"/>
                                         </connections>

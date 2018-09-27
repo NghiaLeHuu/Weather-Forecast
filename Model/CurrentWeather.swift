@@ -35,17 +35,18 @@ class CurrentWeather {
             let json = JSON(result.value!)
             print(result.value!)
             
-            // get CityName
+            //Get name of the city
             self.cityName = json["name"].stringValue
             
-            // get weatherType
+            //Get weather type
             self.weatherType = json["weather"][0]["main"].stringValue
             
-            // get currentTemp
+            //Get current temp
             let downloadedTemp = json["main"]["temp"].double
+            //Convert the current temp into Celsius degree
             self.currentTemp = (downloadedTemp! - 273.15).rounded(toPlaces: 0)
             
-            // get date
+            //Get date
             let tempDate = json["dt"].double
             //Convert date to timestamp
             let convertDate = Date(timeIntervalSince1970: tempDate!)
