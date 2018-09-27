@@ -37,18 +37,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         currentWeather = CurrentWeather()
-//        currentWeather.downloadCurrentWeather {
-//            self.cityName.text = self.currentWeather._cityName
-//            self.weatherType.text = self.currentWeather._weatherType
-//            self.currentCityTemp.text = "\(Int(self.currentWeather._currentTemp))"
-//            self.currentDate.text = self.currentWeather._date
-//        }
-//        print("Data Downloaded")
         ForeCastTableView.delegate = self
         ForeCastTableView.dataSource = self
-        downloadForecastWeather {
-            print("DATA DOWNLOADED")
-        }
+       
         setupLocation()
     }
 
@@ -64,21 +55,17 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startMonitoringSignificantLocationChanges()
-            //locationManager.startUpdatingLocation()
+            locationManager.startUpdatingLocation()
         }
     }
     
-    //var i:Int = 0
-    
+    var i:Int = 0
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        locationAuthCheck()
-        
-//        if(i == 0 ){
-//            locationAuthCheck()
-//            i = i + 1
-//        }
+    //Get location (run one time)
+        if(i == 0 ){
+            locationAuthCheck()
+            i = i + 1
+        }
         
     }
     
@@ -96,7 +83,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
             
             // Download the API Data
-            
             currentWeather.downloadCurrentWeathers {
                 
                 self.cityName.text = self.currentWeather.cityName
@@ -104,6 +90,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate{
                 self.currentCityTemp.text = "\(Int(self.currentWeather.currentTemp))"
                 self.currentDate.text = self.currentWeather.date
             }
+            
+            // Download the Forecast Weather
+            downloadForecastWeather {
+                print("DATA DOWNLOADED")
+            }
+            
             
         } else {
             locationManager.requestWhenInUseAuthorization()
